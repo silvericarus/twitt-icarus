@@ -72,3 +72,11 @@ body{
     margin-block-start: 10px;
     margin-block-end: 10px;
 }
+
+.icon {
+    margin-right:calc(0.5em - 1px) !important;
+}
+
+#navbuttons{
+    margin-left: 36px;
+}
