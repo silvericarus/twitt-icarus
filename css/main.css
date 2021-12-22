@@ -1,5 +1,6 @@
 body{
     background-color: rgb(21, 32, 43);
+    font-family: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .column{
@@ -37,7 +38,7 @@ body{
     justify-content: center;
     background-color: #bebdbd50;
     color: #ffffff;
-    border-radius: 30px;
+    border-radius: 30px !important;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
 }
@@ -50,7 +51,7 @@ body{
     color: #ffffff;
     background-color: rgb(255, 122, 0);
     border: 0;
-    border-radius: 30px;
+    border-radius: 30px !important;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
 }
@@ -62,7 +63,6 @@ body{
     justify-content: center;
     background-color: rgb(224, 109, 2);
     color: #ffffff;
-    border-radius: 30px;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
 }
@@ -135,5 +135,49 @@ nav{
     box-sizing: border-box;
     border-bottom: 1px solid rgb(56, 68, 77);
     width: 100%;
-    height: 120px !important;
+    height: fit-content !important;
+}
+
+.second-section{
+    display:flex;
+    flex-direction: row;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#tweettext{
+    width: 100%;
+    min-height: 45px;
+    height:fit-content;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    resize: none;
+    font-size: large;
+    margin-left: 12px;
+    color: #ffffff;
+}
+
+#tweettext:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(56, 68, 77);
+}
+
+.third-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.writterbuttons{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+}
+
+.icon.orange > svg{
+    color: rgb(224, 109, 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
