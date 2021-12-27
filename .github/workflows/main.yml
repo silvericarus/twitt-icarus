@@ -39,7 +39,7 @@ jobs:
   # uses: crazy-max/ghaction-github-pages@db4476a01402e1a7ce05f41832040eef16d14925
           uses: crazy-max/ghaction-github-pages@v2.5.0
           with:
-            target_branch: gh-pages
+            target_branch: refs/remotes/origin/gh-pages
     # Build directory to deploy
             build_dir:  .
     # Allow Jekyll to build your site
