@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "homepage": "https://silvericarus.github.io/twitt-icarus/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\"",
+    "start": "node server.js",
+    "predeploy": "npm run test",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +16,8 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "express": "^4.17.1",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
