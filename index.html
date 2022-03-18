@@ -7,11 +7,12 @@
     <title>Twitt-Icarus</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <script defer src="./node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
-    <script defer src="./node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
-    <script defer src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/brands.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/regular.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/fontawesome.min.js"></script>
+    <script defer src="./js/main.js"></script>
 </head>
-<body>
+<body onload="generateRandomTweets();">
     <div class="columns">
         <div class="column is-one-quarter">
           <nav>
@@ -81,7 +82,9 @@
                 </button>
                 <button class="button is-info-custom is-small" title="Emojis">
                   <span class="icon is-small orange">
-                    <i class="fas fa-smile"></i>
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M15.5,8A1.5,1.5 0 0,1 17,9.5A1.5,1.5 0 0,1 15.5,11A1.5,1.5 0 0,1 14,9.5A1.5,1.5 0 0,1 15.5,8M8.5,8A1.5,1.5 0 0,1 10,9.5A1.5,1.5 0 0,1 8.5,11A1.5,1.5 0 0,1 7,9.5A1.5,1.5 0 0,1 8.5,8M12,17.5C9.67,17.5 7.69,16.04 6.89,14H17.11C16.3,16.04 14.33,17.5 12,17.5Z" />
+                    </svg>
                   </span>
                 </button>
                 <button class="button is-info-custom is-small" title="Programación">
@@ -93,13 +96,16 @@
                 </button>
                 <button class="button is-info-custom is-small" title="Ubicación">
                   <span class="icon is-small orange">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+                    </svg>
                   </span>
                 </button>
               </div>
                 <button class="button is-primary-custom is-small"><span class="thick-span">Twittear</span></button>
             </div>
           </section>
+          <div id="tweets"></div>
         </div>
         <div class="column is-one-third">
           <div class="box">
