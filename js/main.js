@@ -1,6 +1,6 @@
+
 function randomNumber() {
-    var number = Math.floor(Math.random() * 10) + 1;
-    return number;
+    return Math.floor(Math.random() * 10) + 1;
 }
 
 var mainTweetDiv = document.getElementById("tweets");
@@ -59,34 +59,38 @@ function generateTweet(text, user, name) {
 
 //function that generates random names with numbers
 function randomName() {
-    var name = "";
-    var nameLength = 15;
-    for (var i = 0; i <= nameLength; i++) {
-        var randomNumber = Math.floor(Math.random() * 26) + 97;
-        name += String.fromCharCode(randomNumber);
-    }
-    return name;
+    return get_name();
 }
 
 //function that generates random users
-function randomUser() {
+function randomUser(preUser) {
     var user = "";
-    var userLength = 10;
-    for (var i = 0; i <= userLength; i++) {
-        var randomNumber = Math.floor(Math.random() * 26) + 97;
-        user += String.fromCharCode(randomNumber);
-    }
+
+    user += preUser;
+    user += '_';
+    user += randomNumber();
+    user += randomNumber();
     return user;
 }
 
 //function that generates random text
 function randomText() {
-    var text = "";
-    var textLength = 256;
-    for (var i = 0; i <= textLength; i++) {
+    var text;
+    var parsedJSON;
+    var textLength = 255;
+    var http = new XMLHttpRequest();
+    http.open(
+        "GET",
+        "https://api.api-ninjas.com/v1/quotes",
+        false);
+    http.setRequestHeader("X-Api-Key", "5Vz/uqBeHhgseibhLtKlUQ==LKgzgve9JNjoox8j");
+    http.send(null);
+    parsedJSON = JSON.parse(http.responseText);
+    text = parsedJSON[0].quote;
+    /*for (var i = 0; i <= textLength; i++) {
         var randomNumber = Math.floor(Math.random() * 26) + 97;
         text += String.fromCharCode(randomNumber);
-    }
+    }*/
     return text;
 }
 
@@ -97,8 +101,8 @@ function generateRandomTweets() {
         tweetDiv.removeChild(tweets[i]);
     }
     for (var i = 0; i < 8; i++) {
-        var name = randomName();
-        var user = randomUser();
+        var user = randomName();
+        var name = randomUser(user);
         var text = randomText();
         generateTweet(text, user, name);
     }
