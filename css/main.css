@@ -211,6 +211,9 @@ nav{
     width: inherit;
     border-bottom: 1px solid rgb(56, 68, 77);
     height: fit-content;
+    color: rgb(247, 249, 249)!important;
+    cursor: pointer;
+    overflow-wrap: break-word;
 }
 
 .tweetdiv{
