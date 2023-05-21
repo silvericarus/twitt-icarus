@@ -1,3 +1,18 @@
+/*
+Our Identicons are 
+simple 5×5 “pixel”
+sprites that are 
+generated using a 
+hash of the user's ID. 
+The algorithm walks through 
+the hash and turns pixels 
+on or off depending on even 
+or odd values. These generated 
+patterns, combined with 
+hash-determined color values, 
+ensures a huge number of unique Identicons.
+*/
+
 body{
     background-color: rgb(21, 32, 43);
     font-family: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -6,6 +21,7 @@ body{
 .column{
     float: left;
     overflow: auto;
+    height: 100%;
 }
 
 /* Left column */
@@ -15,8 +31,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .is-info-custom{
@@ -27,8 +43,8 @@ body{
     color: #ffffff;
     background-color: #00000000;
     border: 0;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .is-info-custom:hover{
@@ -39,8 +55,8 @@ body{
     background-color: #bebdbd50;
     color: #ffffff;
     border-radius: 30px !important;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .is-primary-custom{
@@ -195,6 +211,9 @@ nav{
     width: inherit;
     border-bottom: 1px solid rgb(56, 68, 77);
     height: fit-content;
+    color: rgb(247, 249, 249)!important;
+    cursor: pointer;
+    overflow-wrap: break-word;
 }
 
 .tweetdiv{
