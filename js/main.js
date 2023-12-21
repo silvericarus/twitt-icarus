@@ -89,7 +89,8 @@ function randomUser(preUser) {
 //function that generates random text
 async function randomText() {
     const number = randomNumber() + randomNumber();
-    const apiUrl = `http://localhost:3000/xkcd/${number}`;
+    const currentUrl = window.location.href;
+    const apiUrl = `${currentUrl}xkcd/${number}`;
 
     try {
         const response = await fetch(apiUrl);
